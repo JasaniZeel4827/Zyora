@@ -119,13 +119,3 @@ npm run preview
 # or
 yarn preview
 ```
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- Built with [Create React App](https://create-react-app.dev/)
-- 3D rendering powered by [Three.js](https://threejs.org/)
-- Special thanks to the React Three Fiber community
