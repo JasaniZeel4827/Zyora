@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --sapphire-blue: #073B4C;
+  --burgundy: #611224;
+  --pure-white: #ffffff;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, #073B4C 0%, #611224 100%);
+}
+
+body {
+  margin: 0;
+}
+
+.outline-text {
+  -webkit-text-stroke: 1px #ffffff;
+  color: transparent;
+}
+
+/* Logo background removal */
+.logo-no-bg {
+  background: transparent;
+  mix-blend-mode: multiply;
+}
+
+.logo-no-bg-alt {
+  background: transparent;
+  mix-blend-mode: multiply;
+  filter: brightness(0.8) contrast(1.2);
+}
+
+/* ZYORA Logo Text Styling */
+.zyora-logo {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  font-size: 2rem;
+  color: #ffffff;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Custom utility classes for the new color palette */
+.bg-sapphire-blue {
+  background-color: var(--sapphire-blue);
+}
+
+.bg-burgundy {
+  background-color: var(--burgundy);
+}
+
+.text-sapphire-blue {
+  color: var(--sapphire-blue);
+}
+
+.text-burgundy {
+  color: var(--burgundy);
+}
+
+.border-sapphire-blue {
+  border-color: var(--sapphire-blue);
+}
+
+.border-burgundy {
+  border-color: var(--burgundy);
+}
