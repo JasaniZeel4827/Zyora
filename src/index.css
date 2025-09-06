@@ -51,6 +51,18 @@ body {
   background-clip: text;
 }
 
+/* Mobile responsive logo positioning */
+@media (max-width: 768px) {
+  .zyora-logo {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem;
+    z-index: 20;
+  }
+}
+
 /* Custom utility classes for the new color palette */
 .bg-sapphire-blue {
   background-color: var(--sapphire-blue);
@@ -74,4 +86,109 @@ body {
 
 .border-burgundy {
   border-color: var(--burgundy);
+}
+
+/* Mobile responsive navigation and layout */
+@media (max-width: 768px) {
+  /* Center logo for mobile */
+  .zyora-logo {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem;
+    z-index: 20;
+  }
+  
+  /* Hide desktop navigation on mobile */
+  main > div:nth-child(2) {
+    display: none;
+  }
+  
+  /* Mobile navigation container */
+  .mobile-nav-container {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 320px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    z-index: 20;
+    pointer-events: auto;
+  }
+  
+  /* Mobile navigation buttons */
+  .mobile-nav-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+  
+  .mobile-nav-btn:hover:not(:disabled) {
+    border-color: var(--sapphire-blue);
+    background: rgba(7, 59, 76, 0.2);
+    transform: scale(1.1);
+  }
+  
+  .mobile-nav-btn:active:not(:disabled) {
+    transform: scale(0.95);
+  }
+  
+  .mobile-nav-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  /* Mobile page indicator */
+  .mobile-page-indicator {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    min-width: 80px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 0.5px;
+  }
+  
+  /* Mobile text scaling for horizontal scroll */
+  .animate-horizontal-scroll h1 {
+    font-size: 4rem !important;
+  }
+  
+  .animate-horizontal-scroll h2 {
+    font-size: 3rem !important;
+  }
+  
+  /* Mobile horizontal scroll adjustments */
+  .animate-horizontal-scroll {
+    gap: 4rem !important;
+    padding: 0 2rem !important;
+  }
+  
+  /* Adjust main container for mobile */
+  main {
+    padding-top: 80px;
+  }
+}
+
+/* Desktop styles - hide mobile nav */
+@media (min-width: 769px) {
+  .mobile-nav-container {
+    display: none;
+  }
 }

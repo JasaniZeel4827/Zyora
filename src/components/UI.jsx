@@ -1,5 +1,6 @@
 import { atom, useAtom } from "jotai";
 import { useEffect } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const pictures = [
   "DSC00680",
@@ -82,6 +83,27 @@ export const UI = () => {
               Back Cover
             </button>
           </div>
+        </div>
+        
+        {/* Mobile Navigation */}
+        <div className="mobile-nav-container">
+          <button
+            className="mobile-nav-btn mobile-nav-left"
+            onClick={() => setPage(Math.max(0, page - 1))}
+            disabled={page === 0}
+          >
+            <ChevronLeft size={24} />
+          </button>
+          <div className="mobile-page-indicator">
+            {page === 0 ? "Cover" : page === pages.length ? "Back Cover" : `Page ${page}`}
+          </div>
+          <button
+            className="mobile-nav-btn mobile-nav-right"
+            onClick={() => setPage(Math.min(pages.length, page + 1))}
+            disabled={page === pages.length}
+          >
+            <ChevronRight size={24} />
+          </button>
         </div>
       </main>
 
